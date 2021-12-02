@@ -1,4 +1,4 @@
-package io.github.jonathanSampaio.domain.service;
+package io.github.jonathanSampaio.service;
 
 import io.github.jonathanSampaio.domain.entity.Pedido;
 import io.github.jonathanSampaio.domain.enums.StatusPedido;

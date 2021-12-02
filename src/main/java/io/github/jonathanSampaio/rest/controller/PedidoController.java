@@ -3,7 +3,7 @@ package io.github.jonathanSampaio.rest.controller;
 import io.github.jonathanSampaio.domain.entity.ItemPedido;
 import io.github.jonathanSampaio.domain.entity.Pedido;
 import io.github.jonathanSampaio.domain.enums.StatusPedido;
-import io.github.jonathanSampaio.domain.service.PedidoService;
+import io.github.jonathanSampaio.service.PedidoService;
 import io.github.jonathanSampaio.rest.dto.AtualizacaoStatusPedidoDTO;
 import io.github.jonathanSampaio.rest.dto.InformacaoItemPedidoDTO;
 import io.github.jonathanSampaio.rest.dto.InformacoesPedidoDTO;

@@ -1,4 +1,4 @@
-package io.github.jonathanSampaio.domain.service.exception;
+package io.github.jonathanSampaio.exception;
 
 public class PedidoNaoEncontradoException extends RuntimeException {
     public PedidoNaoEncontradoException() {

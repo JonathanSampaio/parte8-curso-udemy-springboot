@@ -1,6 +1,6 @@
 package io.github.jonathanSampaio.rest.controller;
 
-import io.github.jonathanSampaio.domain.service.exception.PedidoNaoEncontradoException;
+import io.github.jonathanSampaio.exception.PedidoNaoEncontradoException;
 import io.github.jonathanSampaio.exception.RegraNegocioException;
 import io.github.jonathanSampaio.rest.ApiErrors;
 import org.springframework.http.HttpStatus;

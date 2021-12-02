@@ -1,4 +1,4 @@
-package io.github.jonathanSampaio.domain.service.impl;
+package io.github.jonathanSampaio.service.impl;
 
 import io.github.jonathanSampaio.domain.entity.Cliente;
 import io.github.jonathanSampaio.domain.entity.ItemPedido;
@@ -9,8 +9,8 @@ import io.github.jonathanSampaio.domain.repository.ClienteRepository;
 import io.github.jonathanSampaio.domain.repository.ItemPedidoRepository;
 import io.github.jonathanSampaio.domain.repository.PedidoRepository;
 import io.github.jonathanSampaio.domain.repository.ProdutoRepository;
-import io.github.jonathanSampaio.domain.service.PedidoService;
-import io.github.jonathanSampaio.domain.service.exception.PedidoNaoEncontradoException;
+import io.github.jonathanSampaio.service.PedidoService;
+import io.github.jonathanSampaio.exception.PedidoNaoEncontradoException;
 import io.github.jonathanSampaio.exception.RegraNegocioException;
 import io.github.jonathanSampaio.rest.dto.ItemPedidoDTO;
 import io.github.jonathanSampaio.rest.dto.PedidoDTO;
