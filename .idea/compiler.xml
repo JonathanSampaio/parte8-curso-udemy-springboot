@@ -12,6 +12,7 @@
         <module name="vendas" />
         <module name="parte8-Spring-Security-com-JSON-Web-Token-JWT" />
         <module name="parte3-conexao-em-jpa" />
+        <module name="parte8-spring-security-com-json-web-token-jwt" />
         <module name="parte5-RESTul-API's-com-spring-web" />
         <module name="parte7-continuando-com-bean-validation" />
       </profile>
@@ -25,6 +26,7 @@
       <module name="parte6-RESTFUL-API's-com-spring-web-com-lombok" options="-parameters" />
       <module name="parte7-continuando-com-bean-validation" options="-parameters" />
       <module name="parte8-Spring-Security-com-JSON-Web-Token-JWT" options="-parameters" />
+      <module name="parte8-spring-security-com-json-web-token-jwt" options="-parameters" />
       <module name="vendas" options="-parameters" />
     </option>
   </component>
