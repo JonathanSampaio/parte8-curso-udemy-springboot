@@ -2,6 +2,7 @@ package io.github.jonathanSampaio.service.impl;
 
 import io.github.jonathanSampaio.domain.entity.Usuario;
 import io.github.jonathanSampaio.domain.repository.UsuarioRepository;
+import io.github.jonathanSampaio.exception.SenhaInvalidaException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,12 +25,22 @@ public class UsuarioServiceImpl implements UserDetailsService {
         return usuarioRepository.save(usuario);
     }
 
+    public UserDetails autenticar(Usuario usuario) throws SenhaInvalidaException {
+        UserDetails user= loadUserByUsername(usuario.getLogin());
+        boolean senhasBatem = encoder.matches(usuario.getSenha(), user.getPassword());
+
+        if (senhasBatem){
+            return user;
+        }
+        throw new SenhaInvalidaException();
+    }
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-       Usuario usuario =  usuarioRepository.findByLogin(username)
+        Usuario usuario =  usuarioRepository.findByLogin(username)
                 .orElseThrow( () -> new UsernameNotFoundException("Usuário não encontrado na base de dados"));
 
-       String[] roles = usuario.isAdmin() ? new String[]{"ADMIN", "USER"} : new String[] {"USER"};
+        String[] roles = usuario.isAdmin() ? new String[]{"ADMIN", "USER"} : new String[] {"USER"};
         return User
                 .builder()
                 .username(usuario.getLogin())
